@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<!-- quickly hacked from commonlisp.xml -->
+<language version="1" kateversion="5.0" name="Janet" section="Sources" extensions="*.janet" mimetype="" author="Leah Neukirchen (leah@vuxu.org)" license="MIT">
+  <highlighting>
+    <list name="symbols">
+      <item>%</item>
+      <item>%=</item>
+      <item>*</item>
+      <item>*=</item>
+      <item>+</item>
+      <item>++</item>
+      <item>+=</item>
+      <item>-</item>
+      <item>--</item>
+      <item>-=</item>
+      <item>-&gt;</item>
+      <item>-&gt;></item>
+      <item>-?&gt;</item>
+      <item>-?&gt;></item>
+      <item>/</item>
+      <item>/=</item>
+      <item>&lt;</item>
+      <item>&lt;=</item>
+      <item>=</item>
+      <item>&gt;</item>
+      <item>&gt;=</item>
+    </list>
+    <list name="definitions">
+      <item>def</item> 
+      <item>def-</item> 
+      <item>defn</item> 
+      <item>defn-</item> 
+      <item>defglobal</item> 
+      <item>defmacro</item> 
+      <item>defmacro-</item> 
+    </list>
+    <list name="keywords">
+      <item>break</item>
+      <item>do</item>
+      <item>fn</item>
+      <item>if</item>
+      <item>quasiquote</item>
+      <item>quote</item>
+      <item>set</item>
+      <item>splice</item>
+      <item>unquote</item>
+      <item>var</item>
+      <item>while</item>
+
+      <item>abstract?</item>
+      <item>all</item>
+      <item>all-bindings</item>
+      <item>all-dynamics</item>
+      <item>and</item>
+      <item>apply</item>
+      <item>array</item>
+      <item>array/concat</item>
+      <item>array/ensure</item>
+      <item>array/fill</item>
+      <item>array/insert</item>
+      <item>array/new</item>
+      <item>array/new-filled</item>
+      <item>array/peek</item>
+      <item>array/pop</item>
+      <item>array/push</item>
+      <item>array/remove</item>
+      <item>array/slice</item>
+      <item>array?</item>
+      <item>as->gt;</item>
+      <item>as?->gt;</item>
+      <item>asm</item>
+      <item>assert</item>
+      <item>bad-compile</item>
+      <item>bad-parse</item>
+      <item>band</item>
+      <item>blshift</item>
+      <item>bnot</item>
+      <item>boolean?</item>
+      <item>bor</item>
+      <item>brshift</item>
+      <item>brushift</item>
+      <item>buffer</item>
+      <item>buffer/bit</item>
+      <item>buffer/bit-clear</item>
+      <item>buffer/bit-set</item>
+      <item>buffer/bit-toggle</item>
+      <item>buffer/blit</item>
+      <item>buffer/clear</item>
+      <item>buffer/fill</item>
+      <item>buffer/format</item>
+      <item>buffer/new</item>
+      <item>buffer/new-filled</item>
+      <item>buffer/popn</item>
+      <item>buffer/push-byte</item>
+      <item>buffer/push-string</item>
+      <item>buffer/push-word</item>
+      <item>buffer/slice</item>
+      <item>buffer?</item>
+      <item>bxor</item>
+      <item>bytes?</item>
+      <item>case</item>
+      <item>cfunction?</item>
+      <item>cli-main</item>
+      <item>comment</item>
+      <item>comp</item>
+      <item>compile</item>
+      <item>complement</item>
+      <item>comptime</item>
+      <item>cond</item>
+      <item>coro</item>
+      <item>count</item>
+      <item>debug</item>
+      <item>debug/arg-stack</item>
+      <item>debug/break</item>
+      <item>debug/fbreak</item>
+      <item>debug/lineage</item>
+      <item>debug/stack</item>
+      <item>debug/stacktrace</item>
+      <item>debug/step</item>
+      <item>debug/unbreak</item>
+      <item>debug/unfbreak</item>
+      <item>dec</item>
+      <item>deep-not=</item>
+      <item>deep=</item>
+      <item>default</item>
+      <item>default-peg-grammar</item>
+      <item>defer</item>
+      <item>describe</item>
+      <item>dictionary?</item>
+      <item>disasm</item>
+      <item>distinct</item>
+      <item>doc</item>
+      <item>doc*</item>
+      <item>doc-format</item>
+      <item>dofile</item>
+      <item>drop</item>
+      <item>drop-until</item>
+      <item>drop-while</item>
+      <item>dyn</item>
+      <item>each</item>
+      <item>eachk</item>
+      <item>eachp</item>
+      <item>empty?</item>
+      <item>env-lookup</item>
+      <item>eprin</item>
+      <item>eprinf</item>
+      <item>eprint</item>
+      <item>eprintf</item>
+      <item>error</item>
+      <item>eval</item>
+      <item>eval-string</item>
+      <item>even?</item>
+      <item>every?</item>
+      <item>extreme</item>
+      <item>false?</item>
+      <item>fiber/current</item>
+      <item>fiber/getenv</item>
+      <item>fiber/maxstack</item>
+      <item>fiber/new</item>
+      <item>fiber/setenv</item>
+      <item>fiber/setmaxstack</item>
+      <item>fiber/status</item>
+      <item>fiber?</item>
+      <item>file/close</item>
+      <item>file/flush</item>
+      <item>file/open</item>
+      <item>file/popen</item>
+      <item>file/read</item>
+      <item>file/seek</item>
+      <item>file/temp</item>
+      <item>file/write</item>
+      <item>filter</item>
+      <item>find</item>
+      <item>find-index</item>
+      <item>first</item>
+      <item>flatten</item>
+      <item>flatten-into</item>
+      <item>for</item>
+      <item>freeze</item>
+      <item>frequencies</item>
+      <item>function?</item>
+      <item>gccollect</item>
+      <item>gcinterval</item>
+      <item>gcsetinterval</item>
+      <item>generate</item>
+      <item>gensym</item>
+      <item>get</item>
+      <item>get-in</item>
+      <item>getline</item>
+      <item>hash</item>
+      <item>idempotent?</item>
+      <item>identity</item>
+      <item>if-let</item>
+      <item>if-not</item>
+      <item>if-with</item>
+      <item>import</item>
+      <item>import*</item>
+      <item>in</item>
+      <item>inc</item>
+      <item>indexed?</item>
+      <item>int/s64</item>
+      <item>int/u64</item>
+      <item>int?</item>
+      <item>interleave</item>
+      <item>interpose</item>
+      <item>invert</item>
+      <item>janet/build</item>
+      <item>janet/config-bits</item>
+      <item>janet/version</item>
+      <item>juxt</item>
+      <item>juxt*</item>
+      <item>keep</item>
+      <item>keys</item>
+      <item>keyword</item>
+      <item>keyword?</item>
+      <item>kvs</item>
+      <item>last</item>
+      <item>length</item>
+      <item>let</item>
+      <item>load-image</item>
+      <item>load-image-dict</item>
+      <item>loop</item>
+      <item>macex</item>
+      <item>macex1</item>
+      <item>make-env</item>
+      <item>make-image</item>
+      <item>make-image-dict</item>
+      <item>map</item>
+      <item>mapcat</item>
+      <item>marshal</item>
+      <item>match</item>
+      <item>math/-inf</item>
+      <item>math/abs</item>
+      <item>math/acos</item>
+      <item>math/acosh</item>
+      <item>math/asin</item>
+      <item>math/asinh</item>
+      <item>math/atan</item>
+      <item>math/atan2</item>
+      <item>math/atanh</item>
+      <item>math/cbrt</item>
+      <item>math/ceil</item>
+      <item>math/cos</item>
+      <item>math/cosh</item>
+      <item>math/e</item>
+      <item>math/exp</item>
+      <item>math/exp2</item>
+      <item>math/expm1</item>
+      <item>math/floor</item>
+      <item>math/hypot</item>
+      <item>math/inf</item>
+      <item>math/log</item>
+      <item>math/log10</item>
+      <item>math/log2</item>
+      <item>math/pi</item>
+      <item>math/pow</item>
+      <item>math/random</item>
+      <item>math/rng</item>
+      <item>math/rng-buffer</item>
+      <item>math/rng-int</item>
+      <item>math/rng-uniform</item>
+      <item>math/round</item>
+      <item>math/seedrandom</item>
+      <item>math/sin</item>
+      <item>math/sinh</item>
+      <item>math/sqrt</item>
+      <item>math/tan</item>
+      <item>math/tanh</item>
+      <item>math/trunc</item>
+      <item>max</item>
+      <item>mean</item>
+      <item>merge</item>
+      <item>merge-into</item>
+      <item>min</item>
+      <item>mod</item>
+      <item>module/add-paths</item>
+      <item>module/cache</item>
+      <item>module/expand-path</item>
+      <item>module/find</item>
+      <item>module/loaders</item>
+      <item>module/loading</item>
+      <item>module/paths</item>
+      <item>nan?</item>
+      <item>nat?</item>
+      <item>native</item>
+      <item>neg?</item>
+      <item>next</item>
+      <item>nil?</item>
+      <item>not</item>
+      <item>not=</item>
+      <item>number?</item>
+      <item>odd?</item>
+      <item>one?</item>
+      <item>or</item>
+      <item>os/arch</item>
+      <item>os/cd</item>
+      <item>os/clock</item>
+      <item>os/cryptorand</item>
+      <item>os/cwd</item>
+      <item>os/date</item>
+      <item>os/dir</item>
+      <item>os/environ</item>
+      <item>os/execute</item>
+      <item>os/exit</item>
+      <item>os/getenv</item>
+      <item>os/link</item>
+      <item>os/mkdir</item>
+      <item>os/rename</item>
+      <item>os/rm</item>
+      <item>os/rmdir</item>
+      <item>os/setenv</item>
+      <item>os/shell</item>
+      <item>os/sleep</item>
+      <item>os/stat</item>
+      <item>os/time</item>
+      <item>os/touch</item>
+      <item>os/which</item>
+      <item>pairs</item>
+      <item>parser/byte</item>
+      <item>parser/clone</item>
+      <item>parser/consume</item>
+      <item>parser/eof</item>
+      <item>parser/error</item>
+      <item>parser/flush</item>
+      <item>parser/has-more</item>
+      <item>parser/insert</item>
+      <item>parser/new</item>
+      <item>parser/produce</item>
+      <item>parser/state</item>
+      <item>parser/status</item>
+      <item>parser/where</item>
+      <item>partial</item>
+      <item>partition</item>
+      <item>peg/compile</item>
+      <item>peg/match</item>
+      <item>pos?</item>
+      <item>postwalk</item>
+      <item>pp</item>
+      <item>prewalk</item>
+      <item>prin</item>
+      <item>prinf</item>
+      <item>print</item>
+      <item>printf</item>
+      <item>product</item>
+      <item>propagate</item>
+      <item>protect</item>
+      <item>put</item>
+      <item>put-in</item>
+      <item>quit</item>
+      <item>range</item>
+      <item>reduce</item>
+      <item>repl</item>
+      <item>require</item>
+      <item>resume</item>
+      <item>reverse</item>
+      <item>root-env</item>
+      <item>run-context</item>
+      <item>scan-number</item>
+      <item>seq</item>
+      <item>setdyn</item>
+      <item>short-fn</item>
+      <item>slice</item>
+      <item>slurp</item>
+      <item>some</item>
+      <item>sort</item>
+      <item>sorted</item>
+      <item>spit</item>
+      <item>stderr</item>
+      <item>stdin</item>
+      <item>stdout</item>
+      <item>string</item>
+      <item>string/ascii-lower</item>
+      <item>string/ascii-upper</item>
+      <item>string/bytes</item>
+      <item>string/check-set</item>
+      <item>string/find</item>
+      <item>string/find-all</item>
+      <item>string/format</item>
+      <item>string/from-bytes</item>
+      <item>string/has-prefix?</item>
+      <item>string/has-suffix?</item>
+      <item>string/join</item>
+      <item>string/repeat</item>
+      <item>string/replace</item>
+      <item>string/replace-all</item>
+      <item>string/reverse</item>
+      <item>string/slice</item>
+      <item>string/split</item>
+      <item>string/trim</item>
+      <item>string/triml</item>
+      <item>string/trimr</item>
+      <item>string?</item>
+      <item>struct</item>
+      <item>struct?</item>
+      <item>sum</item>
+      <item>symbol</item>
+      <item>symbol?</item>
+      <item>table</item>
+      <item>table/clone</item>
+      <item>table/getproto</item>
+      <item>table/new</item>
+      <item>table/rawget</item>
+      <item>table/setproto</item>
+      <item>table/to-struct</item>
+      <item>table?</item>
+      <item>take</item>
+      <item>take-until</item>
+      <item>take-while</item>
+      <item>tarray/buffer</item>
+      <item>tarray/copy-bytes</item>
+      <item>tarray/length</item>
+      <item>tarray/new</item>
+      <item>tarray/properties</item>
+      <item>tarray/slice</item>
+      <item>tarray/swap-bytes</item>
+      <item>thread/close</item>
+      <item>thread/current</item>
+      <item>thread/new</item>
+      <item>thread/receive</item>
+      <item>thread/send</item>
+      <item>trace</item>
+      <item>true?</item>
+      <item>truthy?</item>
+      <item>try</item>
+      <item>tuple</item>
+      <item>tuple/brackets</item>
+      <item>tuple/setmap</item>
+      <item>tuple/slice</item>
+      <item>tuple/sourcemap</item>
+      <item>tuple/type</item>
+      <item>tuple?</item>
+      <item>type</item>
+      <item>unless</item>
+      <item>unmarshal</item>
+      <item>untrace</item>
+      <item>update</item>
+      <item>update-in</item>
+      <item>use</item>
+      <item>values</item>
+      <item>var-</item>
+      <item>varfn</item>
+      <item>varglobal</item>
+      <item>walk</item>
+      <item>when</item>
+      <item>when-let</item>
+      <item>when-with</item>
+      <item>with</item>
+      <item>with-dyns</item>
+      <item>with-syms</item>
+      <item>with-vars</item>
+      <item>yield</item>
+      <item>zero?</item>
+      <item>zipcoll</item>
+    </list>
+
+    <list name="modifiers">
+    </list>
+
+    <list name="variables">
+    </list>
+
+    <contexts>
+      <context name="Normal" attribute="Normal" lineEndContext="#stay">
+        <RegExpr attribute="Region Marker" context="#stay" String="#+\s*BEGIN.*$" beginRegion="region"/>
+        <RegExpr attribute="Region Marker" context="#stay" String="#+\s*END.*$" endRegion="region"/>
+        <RegExpr attribute="Comment" context="#stay" String="#.*$"/>
+        <DetectChar attribute="Brackets" context="#stay" char="("/>
+        <DetectChar attribute="Brackets" context="#stay" char=")"/>
+        <keyword attribute="Keyword" context="#stay" String="keywords"/>
+        <keyword attribute="Operator" context="#stay" String="symbols"/>
+        <keyword attribute="Modifier" context="#stay" String="modifiers"/>
+        <keyword attribute="Variable" context="#stay" String="variables"/>
+        <keyword attribute="Definition" context="function_decl" String="definitions"/>
+        <DetectChar attribute="String" context="String" char="&quot;"/>
+        <Detect2Chars attribute="String" context="String" char="@" char1="&quot;"/>
+        <RegExpr attribute="Decimal" context="#stay" String="\d+r\w+" />
+        <Float attribute="Float" context="#stay"/>
+        <Int attribute="Decimal" context="#stay"/>
+      </context>
+      <context name="function_decl" attribute="Function" lineEndContext="#stay">
+        <RegExpr attribute="Function" context="#pop" String="\s*[A-Za-z0-9-+\&lt;\&gt;//\*?!]*\s*" />
+      </context>
+      <context name="SpecialNumber" attribute="Normal" lineEndContext="#pop">
+        <Float attribute="Float" context="#pop"/>
+        <Int attribute="Decimal" context="#pop"/>
+        <HlCOct attribute="BaseN" context="#pop"/>
+        <HlCHex attribute="Float" context="#pop"/>
+      </context>
+      <context name="String" attribute="String" lineEndContext="#stay">
+        <RegExpr attribute="Char" context="#stay" String="\\."/>
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="&quot;"/>
+      </context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal"      defStyleNum="dsNormal"/>
+      <itemData name="Keyword"     defStyleNum="dsKeyword"/>
+      <itemData name="Operator"    defStyleNum="dsOperator"/>
+      <itemData name="Modifier"    defStyleNum="dsBuiltIn"/>
+      <itemData name="Variable"    defStyleNum="dsVariable"/>
+      <itemData name="Definition"  defStyleNum="dsKeyword"/>
+      <itemData name="Decimal"     defStyleNum="dsDecVal"/>
+      <itemData name="BaseN"       defStyleNum="dsBaseN"/>
+      <itemData name="Float"       defStyleNum="dsFloat"/>
+      <itemData name="Function"    defStyleNum="dsFunction"/>
+      <itemData name="Char"        defStyleNum="dsChar"/>
+      <itemData name="String"      defStyleNum="dsString"/>
+      <itemData name="String Char" defStyleNum="dsSpecialChar"/>
+      <itemData name="Comment"     defStyleNum="dsComment"/>
+      <itemData name="Region Marker" defStyleNum="dsRegionMarker"/>
+      <itemData name="Brackets"    defStyleNum="dsNormal" color="#0000ff" selColor="#00ff00" bold="1" italic="0"/>
+    </itemDatas>
+  </highlighting>
+  <general>
+    <keywords casesensitive="1" weakDeliminator="-+*?!&lt;&gt;=/:#\"/>
+    <comments>
+      <comment name="singleLine" start="#" />
+    </comments>
+  </general>
+</language>
